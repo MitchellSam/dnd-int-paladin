@@ -24,8 +24,7 @@
 			<p>The most important aspect of a paladin character is the nature of his or her holy quest. Although the class features related to your oath don't appear until you reach 3rd level, plan ahead for that choice by reading the oath descriptions at the end of the class. Are you a devoted servant of good, loyal to the gods of justice and honor, a holy knight in shining armor venturing forth to smite evil? A re you a glorious champion of the light, cherishing everything beautiful that stands against the shadow, a knight whose oath descends from traditions older than many of the gods? Or are you an embittered loner sworn to take vengeance on those who have done great evil, sent as an angel of death by the gods or driven by your need for revenge? Appendix B lists many deities worshiped by paladins throughout the multiverse, such as Torm, Tyr, Heironeous, Paladine, Kiri-Jolith, Dol Arrah, the Silver Flame, Bahamut, Athena, Re-Horakhty, and Heimdall.</p>
 			<p class="indent">How did you experience your call to serve as a paladin? Did you hear a whisper from an unseen god or angel while you were at prayer? Did another paladin sense the potential within you and decide to train you as a squire? Or did some terrible event—the destruction of your home, perhaps— drive you to your quests? Perhaps you stumbled into a sacred grove or a hidden elven enclave and found yourself called to protect all such refuges of goodness and beauty. Or you might have known from your earliest memories that the paladin’s life was your calling, almost as if you had been sent into the world with that purpose stamped on your soul.</p>
 			<p class="indent">As guardians against the forces of wickedness, paladins are rarely of any evil alignment. Most of them walk the paths of charity and justice. Consider how your alignment colors the way you pursue your holy quest and the manner in which you conduct yourself before gods and mortals. Your oath and alignment might be in harmony, or your oath might represent standards of behavior that you have not yet attained.</p>
-			<h5>QUICK BUILD</h5>
-			<p>You can make a paladin quickly by following these suggestions. First, Strength should be your highest ability score, followed by Charisma. Second, choose the noble background.</p>
+
 			<h3>CLASS FEATURES</h3>
 			<p>As a paladin, you gain the following class features.</p>
             <h5>HIT POINTS</h5>
@@ -41,7 +40,7 @@
                 <li><strong>Tools:</strong> None</li>
             </ul>
             <ul class="unstyled">
-                <li><strong>Saving Throws:</strong> Wisdom, Charisma</li>
+                <li><strong>Saving Throws:</strong> Wisdom, Intelligence</li>
                 <li><strong>Skills:</strong> Choose two skills from Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion</li>
             </ul>
 			<h5>EQUIPMENT</h5>
@@ -124,8 +123,8 @@
 			<grant type="Class Feature" id="ID_WOTC_PHB_CLASS_FEATURE_PALADIN_CLEANSING_TOUCH" level="14" />
 		</rules>
 		<multiclass id="ID_WOTC_PHB_MULTICLASS_PALADIN">
-			<prerequisite>Strength 13 and Charisma 13</prerequisite>
-			<requirements>([str:13],[cha:13])</requirements>
+			<prerequisite>Intelligence 13</prerequisite>
+			<requirements>([int:13])</requirements>
 			<setters>
 				<set name="multiclass proficiencies">Light armor, medium armor, shields, simple weapons, martial weapons</set>
 			</setters>
@@ -143,14 +142,14 @@
 		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_PALADIN_DIVINE_SENSE</requirements>
 		<description>
 			<p>The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (the vampire Count Strahd von Zarovich, for instance). Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the <i>hallow</i> spell.</p>
-			<p class="indent">You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses.</p>
+			<p class="indent">You can use this feature a number of times equal to 1 + your Intelligence modifier. When you finish a long rest, you regain all expended uses.</p>
 		</description>
 		<sheet usage="{{divine sense:count}}/Long Rest" action="Action">
 			<description>You can open your awareness to detect presence of strong evil. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type of any being whose presence you sense, but not its identity. Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated.</description>
 		</sheet>
 		<rules>
 			<stat name="divine sense:count" value="1" />
-			<stat name="divine sense:count" value="charisma:modifier" />
+			<stat name="divine sense:count" value="intelligence:modifier" />
 		</rules>
 	</element>
 	<element name="Lay on Hands" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_PHB_CLASS_FEATURE_PALADIN_LAY_ON_HANDS">
@@ -162,7 +161,7 @@
 			<p class="indent">This feature has no effect on undead and constructs.</p>
 		</description>
 		<sheet action="Action" usage="{{lay on hands:hp pool}}/Long Rest">
-			<description>You can touch a creature and draw power from the pool to restore a number of hp to that creature, up to the maximum amount remaining in your pool. 
+			<description>You can touch a creature and draw power from the pool to restore a number of hp to that creature, up to the maximum amount remaining in your pool.
 			You can expend 5 hp from your pool of healing to cure the target of one disease or neutralize one poison affecting it.
 			This feature has no effect on undead and constructs.</description>
 		</sheet>
@@ -197,14 +196,14 @@
 			<p>By 2nd level, you have learned to draw on divine magic through meditation and prayer to cast spells as a cleric does. See chapter 10 for the general rules of spellcasting and chapter 11 for the paladin spell list.</p>
 			<h5>PREPARING AND CASTING SPELLS</h5>
 			<p>The Paladin table shows how many spell slots you have to cast your paladin spells. To cast one of your paladin spells of 1st level or higher, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.</p>
-			<p class="indent">You prepare the list of paladin spells that are available for you to cast, choosing from the paladin spell list. When you do so, choose a number of paladin spells equal to your Charisma modifier + half your paladin level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.</p>
-			<p class="indent">For example, if you are a 5th-level paladin, you have four 1st-level and two 2nd-level spell slots. With a Charisma of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn’t remove it from your list of prepared spells.</p>
+			<p class="indent">You prepare the list of paladin spells that are available for you to cast, choosing from the paladin spell list. When you do so, choose a number of paladin spells equal to your Intelligence modifier + half your paladin level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.</p>
+			<p class="indent">For example, if you are a 5th-level paladin, you have four 1st-level and two 2nd-level spell slots. With a Intelligence of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn’t remove it from your list of prepared spells.</p>
 			<p class="indent">You can change your list of prepared spells when you finish a long rest. Preparing a new list of paladin spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list.</p>
 			<h5>SPELLCASTING ABILITY</h5>
-			<p>Charisma is your spellcasting ability for your paladin spells, since their power derives from the strength of your convictions. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a paladin spell you cast and when making an attack roll with one.</p>
+			<p>Intelligence is your spellcasting ability for your paladin spells. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a paladin spell you cast and when making an attack roll with one.</p>
 			<center>
-				<p><strong>Spell save DC</strong> = 8 + your proficiency bonus + your Charisma modifier</p>
-				<p><strong>Spell attack modifier</strong> = your proficiency bonus + your Charisma modifier</p>
+				<p><strong>Spell save DC</strong> = 8 + your proficiency bonus + your Intelligence modifier</p>
+				<p><strong>Spell attack modifier</strong> = your proficiency bonus + your Intelligence modifier</p>
 			</center>
 			<h5>SPELLCASTING FOCUS</h5>
 			<p>You can use a holy symbol (found in chapter 5) as a spellcasting focus for your paladin spells.</p>
@@ -212,7 +211,7 @@
 		<sheet display="false">
 			<description>You have learned to draw on divine magic through meditation and prayer to cast spells as a cleric does.</description>
 		</sheet>
-		<spellcasting name="Paladin" ability="Charisma" prepare="true">
+		<spellcasting name="Paladin" ability="Intelligence" prepare="true">
 			<list known="true">Paladin</list>
 		</spellcasting>
 		<rules>
@@ -229,7 +228,7 @@
 			<stat name="paladin:spellcasting:slots:4" value="1" level="17" />
 			<stat name="paladin:spellcasting:slots:5" value="1" level="17" />
 			<stat name="paladin:spellcasting:slots:5" value="1" level="19" />
-			<stat name="paladin:spellcasting:prepare" value="charisma:modifier" />
+			<stat name="paladin:spellcasting:prepare" value="intelligence:modifier" />
 			<stat name="paladin:spellcasting:prepare" value="level:paladin:half" />
 		</rules>
 	</element>
@@ -302,7 +301,7 @@
 	<element name="Aura of Protection" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_PHB_CLASS_FEATURE_PALADIN_AURA_OF_PROTECTION">
 		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_PALADIN_AURA_OF_PROTECTION</requirements>
 		<description>
-			<p>Starting at 6th level, whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious to grant this bonus.</p>
+			<p>Starting at 6th level, whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Intelligence modifier (with a minimum bonus of +1). You must be conscious to grant this bonus.</p>
 			<p class="indent">At 18th level, the range of this aura increases to 30 feet.</p>
 		</description>
 		<sheet>
@@ -312,7 +311,7 @@
 			<stat name="aura of protection:range" value="10" bonus="base" />
 			<stat name="aura of protection:range" value="30" level="18" bonus="base" />
 			<stat name="aura of protection:save bonus" value="1" bonus="base"/>
-			<stat name="aura of protection:save bonus" value="charisma:modifier" bonus="base"/>
+			<stat name="aura of protection:save bonus" value="intelligence:modifier" bonus="base"/>
 		</rules>
 	</element>
 	<element name="Aura of Courage" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_PHB_CLASS_FEATURE_PALADIN_AURA_OF_COURAGE">
@@ -342,14 +341,14 @@
 		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_PALADIN_CLEANSING_TOUCH</requirements>
 		<description>
 			<p>Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch.</p>
-			<p class="indent">You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a long rest.</p>
+			<p class="indent">You can use this feature a number of times equal to your Intelligence modifier (a minimum of once). You regain expended uses when you finish a long rest.</p>
 		</description>
 		<sheet action="Action" usage="{{cleansing touch:count}}/Long Rest">
 			<description>You can end one spell on yourself or on one willing creature that you touch.</description>
 		</sheet>
 		<rules>
 			<stat name="cleansing touch:count" value="1" bonus="base"/>
-			<stat name="cleansing touch:count" value="charisma:modifier" bonus="base"/>
+			<stat name="cleansing touch:count" value="intelligence:modifier" bonus="base"/>
 		</rules>
 	</element>
 
